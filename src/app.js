@@ -7,9 +7,6 @@ const CVC = document.querySelector("#inputcvc");
 const AMOUNT = document.querySelector("#inputamount");
 const POSTALCODE = document.querySelector("#inputpostalcode");
 
-
-
-
 window.onload = function() {
   const CARD = document.querySelector("#inputcard");
   CARD.addEventListener("input", event => {
@@ -56,7 +53,6 @@ window.onload = function() {
     let empty = CHECKMESSAGE();
   });
 
-  
   isValidNumber(CARD);
   isValidNumber(CVC);
   isValidNumber(AMOUNT);
@@ -66,19 +62,11 @@ window.onload = function() {
   isValidName(CITY);
   isValidName(STATE);
 
-
   const SEND = document.querySelector("#button-send");
-    SEND.addEventListener("submit", event => {
-    let  = ;
+  SEND.addEventListener("submit", event => {
+    SEND.preventDefault();
   });
-
 };
-
-
-
-
-
-
 
 const CHECKCARD = () => {
   const CARD = document.querySelector("#inputcard");
@@ -187,9 +175,6 @@ const CHECKMESSAGE = () => {
     }
   });
 };
-
-
-
 
 const isValidName = cadena => {
   cadena.addEventListener("focusout", event => {
