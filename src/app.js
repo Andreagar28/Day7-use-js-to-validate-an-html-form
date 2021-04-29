@@ -207,3 +207,6 @@ const checkOnlyString = text => {
 const checkOnlyNumber = text => {
   return /^[0-9]+$/.test(text);
 };
+const prev = event => {
+  event.preventDefault();
+};
